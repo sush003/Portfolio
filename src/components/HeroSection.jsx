@@ -1,7 +1,10 @@
 import { useEffect, useRef } from "react";
 import AnimatedHeroTitle from "./AnimatedHeroTitle";
+import { LocationTag } from "@/components/ui/location-tag";
+
 
 export default function HeroSection() {
+  
   const heroSectionRef = useRef(null);
   const isInScrollZoneRef = useRef(false);
 
@@ -142,6 +145,7 @@ export default function HeroSection() {
   }, []);
 
   return (
+    
     <section className="hero-section" id="home" ref={heroSectionRef}>
       <div className="hero-content">
         <AnimatedHeroTitle />
@@ -150,6 +154,16 @@ export default function HeroSection() {
           Learn More
         </a>
       </div>
+
+      <div className="absolute top-4 right-4 z-50">
+  <div className="flex flex-col text-white items-end gap-2  backdrop-blur-md rounded-md p-3 shadow-md">
+    
+    {/* <div className="text-white"> */}
+    <LocationTag city="Nashik" country="IN" timezone="IST" />
+    {/* </div> */}
+    
+  </div>
+</div>
 
       <div className="scroll-indicator">
         <a href="#about">↓</a>
@@ -160,5 +174,6 @@ export default function HeroSection() {
         id="spline-viewer"
       ></spline-viewer>
     </section>
+    
   );
 }
