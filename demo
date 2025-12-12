@@ -1,0 +1,6 @@
+table student 
+
+id name rollno div marks subject
+
+select name from student 
+where marks =(max) 
