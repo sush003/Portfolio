@@ -3,9 +3,7 @@ export default function ContactSection() {
     <section className="content-section" id="contact">
       <h2>Get in Touch</h2>
       <p>
-        We'd love to hear from you! Whether you have a question about our
-        services, pricing, or anything else, our team is ready to answer all
-        your questions.
+        "Have a bug to fix? A project to launch? Or just want to argue about Tabs vs. Spaces? Hit me up."
       </p>
 
       <p>

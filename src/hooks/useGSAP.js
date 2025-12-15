@@ -82,6 +82,22 @@ export function setupGSAPAnimations() {
       }
     )
 
+    // ABOUT ME TITLE ANIMATION
+gsap.fromTo(
+  '.about-title',
+  { opacity: 0, y: 40 },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: 'power3.out',
+    scrollTrigger: {
+      trigger: '#about',
+      start: 'top 85%',
+    },
+  }
+)
+
     // Fade divider back out as scrolling continues
     gsap.to('#about .section-divider', {
       opacity: 0,

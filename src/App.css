@@ -87,7 +87,8 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: rgb(18, 18, 18);
+  /* background: rgb(18, 18, 18); */
+  background: transparent;
 }
 
 spline-viewer {
@@ -268,7 +269,7 @@ spline-viewer {
 }
 
 .content-section h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  /* font-size: clamp(2rem, 5vw, 3rem); */
   margin-bottom: 2rem;
   color: white;
 }
@@ -278,7 +279,7 @@ spline-viewer {
 }
 
 .content-section p {
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
   line-height: 1.8;
   margin-bottom: 1.5rem;
   color: #ccc;
@@ -372,4 +373,68 @@ footer {
 footer p {
   color: #999;
   margin: 0;
+}
+
+/* PhotoSwipe blurred background */
+.pswp__bg {
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(30px) !important;
+  -webkit-backdrop-filter: blur(18px) !important;
+}
+
+/* FORCE REMOVE ALL PHOTOSWIPE BACKGROUNDS */
+.pswp,
+.pswp *,
+.pswp__scroll-wrap,
+.pswp__container,
+.pswp__item,
+.pswp__zoom-wrap {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Disable default fade mask */
+.pswp--open {
+  opacity: 1 !important;
+}
+
+
+/* FINAL FIX — Remove PhotoSwipe gap fill & canvas background */
+
+.pswp {
+  --pswp-placeholder-bg: transparent !important;
+}
+
+.pswp__item,
+.pswp__zoom-wrap,
+.pswp__img,
+.pswp__img--placeholder,
+.pswp__canvas,
+.pswp__img--placeholder canvas {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Neutralize inline black placeholder bg */
+.pswp__img--placeholder {
+  background: transparent !important;
+}
+
+
+
+
+
+/* Liquid hover effect for Resume button */
+.liquid {
+  --p: 0%;
+  --t: 0s;
+  background: linear-gradient(#44b8ca 0 0) no-repeat calc(200% - var(--p)) 100% /
+    200% var(--p, 0.2em);
+  transition: 0.7s var(--t), background-position 0.3s calc(0.3s - var(--t));
+}
+
+.liquid:hover {
+  --p: 100%;
+  --t: 0.3s;
+  color: #ffffff;
 }

@@ -14,7 +14,7 @@ function Hero() {
       } else {
         setTitleNumber(titleNumber + 1);
       }
-    }, 2000);
+    }, 700);
     return () => clearTimeout(timeoutId);
   }, [titleNumber, titles]);
 

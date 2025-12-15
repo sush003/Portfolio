@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import AnimatedHeroTitle from "./AnimatedHeroTitle";
 import { LocationTag } from "@/components/ui/location-tag";
+import { ChevronFirst } from "lucide-react";
 
 
 export default function HeroSection() {
@@ -146,17 +147,17 @@ export default function HeroSection() {
 
   return (
     
-    <section className="hero-section" id="home" ref={heroSectionRef}>
+    <section className="hero-section relative h-screen overflow-hidden" id="home" ref={heroSectionRef}>
       <div className="hero-content">
         <AnimatedHeroTitle />
-        <p>Experience the magic of interactive particles</p>
+        <p> </p>
         <a href="#about" className="cta-button">
-          Learn More
+          Judge Me
         </a>
       </div>
 
       <div className="absolute top-4 right-4 z-50">
-  <div className="flex flex-col text-white items-end gap-2  backdrop-blur-md rounded-md p-3 shadow-md">
+  <div className="flex flex-col text-white items-end gap-2  backdrop-blur-md rounded-md p-3 ">
     
     {/* <div className="text-white"> */}
     <LocationTag city="Nashik" country="IN" timezone="IST" />
@@ -170,6 +171,7 @@ export default function HeroSection() {
       </div>
 
       <spline-viewer
+        class="absolute inset-0 -z-0"
         url="https://prod.spline.design/nWDH4bXcHj1w0hva/scene.splinecode"
         id="spline-viewer"
       ></spline-viewer>
@@ -177,3 +179,5 @@ export default function HeroSection() {
     
   );
 }
+
+

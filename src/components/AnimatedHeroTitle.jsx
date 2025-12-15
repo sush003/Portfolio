@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 export default function AnimatedHeroTitle() {
   const [titleNumber, setTitleNumber] = useState(0);
   const titles = useMemo(
-    () => ["Site", "Space", "World", "Journey", "Experience"],
+    () => ["Chaos.", "Trauma.","Localhost.", "Portfolio.", "Beta Test."],
     []
   );
-
+// ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       if (titleNumber === titles.length - 1) {
@@ -21,8 +21,8 @@ export default function AnimatedHeroTitle() {
 
   return (
     <h1 className="animated-hero-title">
-      <span className="static-text">Welcome to My</span>
-      <span className="animated-word-container">
+      <span className="static-text text-[4rem]">This is basically just...</span>
+      <span className="animated-word-container text-[4rem]">
         {titles.map((title, index) => (
           <motion.span
             key={index}
@@ -53,3 +53,5 @@ export default function AnimatedHeroTitle() {
     </h1>
   );
 }
+
+
