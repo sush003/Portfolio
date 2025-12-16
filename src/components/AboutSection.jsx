@@ -1,6 +1,7 @@
 import { HoverBorderGradient } from "./ui/hover-border-gradient.jsx";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
+import pfp2 from "../assets/images/pfp2.jpeg";
 // import "photoswipe/dist/photoswipe.css";
 import { useEffect } from "react";
 import PhotoSwipe from "photoswipe";
@@ -110,7 +111,8 @@ export default function AboutSection() {
           {/* Avatar Below Heading */}
           <div className="flex flex-row items-center gap-4 text-left mb-9">
             <img
-              src="src/assets/images/pfp2.jpeg"
+              // src="../images/pfp2.jpeg"
+              src={pfp2}
               alt="avatar"
               className="w-28 h-28 rounded-full border border-white/60"
             />
