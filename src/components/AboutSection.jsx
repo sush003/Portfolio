@@ -2,6 +2,7 @@ import { HoverBorderGradient } from "./ui/hover-border-gradient.jsx";
 import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import pfp2 from "../assets/images/pfp2.jpeg";
+import resume from "../assets/images/resume.jpg";
 // import "photoswipe/dist/photoswipe.css";
 import { useEffect } from "react";
 import PhotoSwipe from "photoswipe";
@@ -213,7 +214,7 @@ export default function AboutSection() {
           </HoverBorderGradient>
           <div id="gallery--getting-started">
             <a
-              href="src/assets/images/resume.jpg"
+              href={resume}
               data-pswp-width="1600"
               data-pswp-height="2260"
               id="cvImageLink"
