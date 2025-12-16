@@ -8,6 +8,7 @@ import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import { setupGSAPAnimations } from "./hooks/useGSAP";
 import { NavBarDemo } from "./components/navbar";
+import { PixelCursorTrail } from "./components/ui/pixel-trail";
 
 function App() {
   // Scroll to top on page load/refresh
@@ -43,6 +44,7 @@ function App() {
 
   return (
     <>
+      <PixelCursorTrail />
       <NavBarDemo />
       <HeroSection />
       <AboutSection />

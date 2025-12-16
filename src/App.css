@@ -1,3 +1,8 @@
+/* Features section isolation fix */
+#features {
+  isolation: isolate;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -232,6 +237,18 @@ spline-viewer {
   background: rgb(18, 18, 18);
   opacity: 0;
   position: relative;
+  will-change: opacity, transform;
+}
+
+/* Allow skill pill animations to run smoothly and force background/layout for Features section */
+#features.content-section {
+  opacity: 1 !important;
+  background: rgb(18, 18, 18) !important;
+  max-width: 100%;
+}
+#features .container,
+#features > * {
+  background: transparent !important;
 }
 
 /* Faded border above first content section (About Us) */
@@ -319,10 +336,63 @@ spline-viewer {
   color: white;
 }
 
+
 .feature-card p {
   font-size: 1rem;
   color: #aaa;
   margin: 0;
+}
+
+/* Skill Pills (Features Section Replacement) */
+.skill-pill {
+  opacity: 0;
+  will-change: transform, opacity;
+
+  animation-name: pillFadeUp;
+  animation-duration: 0.45s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  backface-visibility: hidden;
+
+  padding: 6px 14px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  background: transparent;
+  white-space: nowrap;
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 1);
+}
+
+/* Subtle entrance animation for skill pills */
+@keyframes pillFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .skill-pill {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+#features .space-y-10 > div {
+  margin-bottom: 1.5rem;
 }
 
 /* Call to Action */

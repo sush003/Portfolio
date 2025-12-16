@@ -12,7 +12,10 @@ export default function AboutSection() {
       gallery: "#gallery--getting-started",
       children: "a",
       pswpModule: () => import("photoswipe"),
-      // uiModule: () => import("photoswipe/dist/photoswipe-ui-default.esm.js"),
+      showHideAnimationType: "fade",
+      showAnimationDuration: 350,
+      hideAnimationDuration: 250,
+      easing: "ease-out",
     });
 
     lightbox.on("uiRegister", () => {
@@ -151,7 +154,7 @@ export default function AboutSection() {
           usually consists of me walking to a coffee shop, judging their Wi-Fi
           speed.
         </p>
-        <div className="mt-8 flex justify-start gap-6">
+        <div className="mt-8 flex justify-start gap-4">
           <HoverBorderGradient className="py-1">
             <a href="https://x.com/SushrutNisal">
               <span className="flex items-center gap-2 ">
@@ -185,7 +188,7 @@ export default function AboutSection() {
           <HoverBorderGradient
             as="button"
             onClick={() => document.getElementById('cvImageLink').click()}
-            className="flex items-center gap-2 text-white py-1"
+            className="flex items-center gap-2 text-white py-1 liquid"
             containerClassName="border-[#0AE4EB]"
           >
             <span>Resume</span>

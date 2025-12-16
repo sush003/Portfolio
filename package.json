@@ -21,7 +21,9 @@
     "photoswipe": "^5.4.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwind-merge": "^2.2.0"
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^2.2.0",
+    "tech-stack-icons": "^3.3.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
