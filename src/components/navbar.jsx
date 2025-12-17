@@ -7,7 +7,7 @@ export function NavBarDemo() {
     { name: "Home", url: "#home", icon: Home },
     { name: "About", url: "#about", icon: User },
     { name: "Skills", url: "#features", icon: Briefcase },
-    { name: "Service", url: "#services", icon: FileText },
+    { name: "Work", url: "#services", icon: FileText },
     { name: "Contact", url: "#contact", icon: FileText },
   ];
 

@@ -355,8 +355,9 @@ spline-viewer {
   backface-visibility: hidden;
 
   padding: 6px 14px;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  /* border-radius: 12px; */
+  border-radius: inherit;
   font-size: 0.9rem;
   color: #ffffff;
   background: transparent;
@@ -365,9 +366,13 @@ spline-viewer {
 }
 
 .skill-pill:hover {
+  border-width: 1px;
+}
+
+.skill-pill:hover {
   transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 1);
+  border-color: #18cad0;
 }
 
 /* Subtle entrance animation for skill pills */
@@ -508,3 +513,11 @@ footer p {
   --t: 0.3s;
   color: #ffffff;
 }
+
+/* .skill-pill {
+  position: relative;
+}
+
+.skill-pill::before {
+  border-width: 0.5px !important;
+} */

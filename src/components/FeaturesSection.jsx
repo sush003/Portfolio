@@ -1,3 +1,4 @@
+import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 // import { StackIcon } from "@/components/ui/stack-icon";
 import StackIcon from "tech-stack-icons";
 import splineIcon from "../assets/images/spline.png";
@@ -94,7 +95,13 @@ export default function FeaturesSection() {
   return (
     <section className="content-section dark" id="features">
       <div className="max-w-[700px] mx-auto text-left text-[2.2rem]">
-        <h2 className="mt-3">Skills</h2>
+        <div className="flex items-center gap-4 mt-6">
+          <h2>Skills</h2>
+          <span className="text-xs tracking-widest mb-6 ml-5 text-muted-foreground/50">
+            Which I use / know
+          </span>
+          {/* <h2>Skills</h2> */}
+        </div>
 
         <p className="text-[1rem] max-w-[720px] text-muted-foreground">
           This is a collection of the languages, frameworks, and tools I utilize
@@ -110,9 +117,11 @@ export default function FeaturesSection() {
 
               <div className="flex flex-wrap gap-3">
                 {group.items.map((skill, i) => (
-                  <span
+                  <HoverBorderGradient
                     key={i}
-                    className="skill-pill flex items-center gap-2"
+                    as="span"
+                    containerClassName="rounded-full border border-transparent"
+                    className="skill-pill flex items-center gap-2 px-3 py-1 text-xs"
                     style={{ animationDelay: `${i * 60}ms` }}
                   >
                     <span className="shrink-0 inline-flex items-center justify-center w-3 h-3">
@@ -131,7 +140,7 @@ export default function FeaturesSection() {
                       )}
                     </span>
                     {skill}
-                  </span>
+                  </HoverBorderGradient>
                 ))}
               </div>
             </div>

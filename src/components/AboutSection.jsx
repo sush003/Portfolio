@@ -3,6 +3,7 @@ import PhotoSwipeLightbox from "photoswipe/lightbox";
 import "photoswipe/style.css";
 import pfp2 from "../assets/images/pfp2.jpeg";
 import resume from "../assets/images/resume.jpg";
+import resumepdf from "../assets/document/Sushrut_resume_SDE_.pdf"
 // import "photoswipe/dist/photoswipe.css";
 import { useEffect } from "react";
 import PhotoSwipe from "photoswipe";
@@ -44,7 +45,7 @@ export default function AboutSection() {
         `,
         onClick: () => {
           const link = document.createElement('a');
-          link.href = "src/assets/document/Sushrut_resume_SDE_.pdf"; // replace later if needed
+          link.href = {resumepdf};    // replace later if needed
           link.download = "Sushrut_Resume.pdf";
           document.body.appendChild(link);
           link.click();
