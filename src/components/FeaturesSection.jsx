@@ -95,7 +95,7 @@ export default function FeaturesSection() {
   return (
     <section className="content-section dark" id="features">
       <div className="max-w-[700px] mx-auto text-left text-[2.2rem]">
-        <div className="flex items-center gap-4 mt-6">
+        <div className="flex items-center gap-4 mt-12">
           <h2>Skills</h2>
           <span className="text-xs tracking-widest mb-6 ml-5 text-muted-foreground/50">
             Which I use / know

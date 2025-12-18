@@ -151,7 +151,12 @@ export default function HeroSection() {
       <div className="hero-content">
         <AnimatedHeroTitle />
         <p> </p>
-        <a href="#about" className="cta-button">
+        <a
+          href="#about"
+          data-ga-event="hero_cta_click"
+          data-ga-label="judge_me_button"
+          className="cta-button"
+        >
           Judge Me
         </a>
       </div>
@@ -167,7 +172,13 @@ export default function HeroSection() {
 </div>
 
       <div className="scroll-indicator">
-        <a href="#about">↓</a>
+        <a
+          href="#about"
+          data-ga-event="hero_scroll_click"
+          data-ga-label="scroll_indicator"
+        >
+          ↓
+        </a>
       </div>
 
       <spline-viewer
@@ -179,5 +190,3 @@ export default function HeroSection() {
     
   );
 }
-
-

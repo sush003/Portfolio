@@ -1,3 +1,4 @@
+import ReactGA from "react-ga4";
 import { useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import AboutSection from "./components/AboutSection";
@@ -14,6 +15,31 @@ function App() {
   // Scroll to top on page load/refresh
   useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  // GA4 page tracking for SPA (including hash/section navigation)
+  useEffect(() => {
+    const sendPageView = () => {
+      const pagePath =
+        window.location.pathname +
+        window.location.search +
+        window.location.hash;
+
+      ReactGA.send({
+        hitType: "pageview",
+        page: pagePath,
+      });
+    };
+
+    // Initial page view
+    sendPageView();
+
+    // Track hash changes (e.g., #about, #services)
+    window.addEventListener("hashchange", sendPageView);
+
+    return () => {
+      window.removeEventListener("hashchange", sendPageView);
+    };
   }, []);
 
   useEffect(() => {

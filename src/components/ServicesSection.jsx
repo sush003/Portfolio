@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import {
   Card,
@@ -75,6 +76,8 @@ export default function ServicesSection() {
                     */}
                     <a
                       href="https://dnote.in/"
+                      data-ga-event="company_link_click"
+                      data-ga-label="experience_dnote"
                       className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 z-20 text-sm"
                       aria-label="External link"
                     >
@@ -105,42 +108,44 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        <h3 className="text-2xl text-white mb-6 mt-12">Projects</h3>
+        
+
+<h3 className="text-2xl text-white mb-6 mt-12">Projects</h3>
 
         <div className="space-y-6">
           {[
             {
-              title: "Project 1",
+              title: "Health Fact Finder",
               description: "Description for Project 1",
               duration: "Jan 2024 – Apr 2024",
               content: "Detailed content for Project 1...",
               logo: Dnote,
-              link: "#"
+              link: "https://github.com/sush003/Health_fact_finderV2"
             },
             {
-              title: "Project 2",
+              title: "Study Spark",
               description: "Description for Project 2",
               duration: "Sep 2023 – Dec 2023",
               content: "Detailed content for Project 2...",
               logo: Dnote,
-              link: "#"
+              link: "https://github.com/sush003/StudySparkAI"
             },
             {
-              title: "Project 3",
+              title: "GIFinder",
               description: "Description for Project 3",
               duration: "May 2023 – Aug 2023",
               content: "Detailed content for Project 3...",
               logo: Dnote,
-              link: "#"
+              link: "https://github.com/sush003/GIFinder"
             },
             {
-              title: "Project 4",
+              title: "Task Flow",
               description: "Description for Project 4",
               duration: "Jan 2023 – Apr 2023",
               content: "Detailed content for Project 4...",
               logo: Dnote,
-              link: "#"
-            }
+              link: "https://github.com/sush003/taskflow33"
+            },
           ].map((project, index) => (
             <Card
               key={index}
@@ -163,13 +168,26 @@ export default function ServicesSection() {
                       {project.title}
                     </h3>
 
-                    <a
-                      href={project.link}
-                      className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 z-20 text-sm"
-                      aria-label="External link"
-                    >
-                      <FontAwesomeIcon icon={faLink} />
-                    </a>
+                    <div className="flex items-center gap-2 z-20">
+                      <a
+                        href={project.link}
+                        data-ga-event="project_live_click"
+                        data-ga-label={project.title}
+                        className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                        aria-label="External link"
+                      >
+                        <FontAwesomeIcon icon={faLink} />
+                      </a>
+                      <a
+                        href={project.link}
+                        data-ga-event="project_github_click"
+                        data-ga-label={project.title}
+                        className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                        aria-label="GitHub link"
+                      >
+                        <FontAwesomeIcon icon={faGithub} />
+                      </a>
+                    </div>
                   </div>
 
                   <p className="mt-3 text-sm text-neutral-400 max-w-[520px] opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
@@ -194,6 +212,73 @@ export default function ServicesSection() {
             </Card>
           ))}
         </div>
+
+{/* Chrome Extension */}
+<h3 className="text-2xl text-white mb-6 mt-8">Chrome Extension</h3>
+<div className="space-y-6">
+  <Card
+    className="group relative bg-neutral-900 border border-neutral-800 rounded-2xl overflow-hidden transition-all duration-300 hover:border-cyan-400"
+  >
+    <div className="flex h-[160px]">
+      {/* Left: Logo */}
+      <div className="w-[220px] flex items-center justify-center border-r border-neutral-800 overflow-hidden">
+        <img
+          src={Dnote}
+          alt={`Chrome Extension logo`}
+          className="h-full w-full object-contain opacity-95 transition-transform duration-300 ease-out group-hover:scale-110"
+        />
+      </div>
+
+      {/* Right: Content */}
+      <div className="flex-1 p-6 relative">
+        <div className="flex items-start justify-between">
+          <h3 className="text-lg font-semibold text-white opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
+            Trackr
+          </h3>
+
+          <div className="flex items-center gap-2 z-20">
+            <a
+              href=""
+              data-ga-event="extension_live_click"
+              data-ga-label="trackr_extension"
+              className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              aria-label="External link"
+            >
+              <FontAwesomeIcon icon={faLink} />
+            </a>
+            <a
+              href="https://github.com/sush003/Trackr"
+              data-ga-event="extension_github_click"
+              data-ga-label="trackr_extension"
+              className="text-neutral-400 hover:text-cyan-400 transition-colors duration-200 text-sm"
+              aria-label="GitHub link"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </div>
+        </div>
+
+        <p className="mt-3 text-sm text-neutral-400 max-w-[520px] opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
+          Chrome extension description.
+        </p>
+        <p className="mt-1 text-xs text-neutral-500 opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
+          2024
+        </p>
+
+        {/* Hover Details */}
+        <div className="absolute inset-0 bg-neutral-900/95 p-6 pl-8 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-[opacity,transform] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu will-change-transform">
+          <div className="absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-neutral-700 to-transparent" />
+          <h4 className="text-white  font-medium mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-150 ">
+            What I worked on
+          </h4>
+          <p className="text-sm  text-neutral-300 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+            Chrome extension details...
+          </p>
+        </div>
+      </div>
+    </div>
+  </Card>
+</div>
       </div>
     </section>
   );

@@ -45,7 +45,7 @@ export default function AboutSection() {
         `,
         onClick: () => {
           const link = document.createElement('a');
-          link.href = {resumepdf};    // replace later if needed
+          link.href = resumepdf;    // replace later if needed
           link.download = "Sushrut_Resume.pdf";
           document.body.appendChild(link);
           link.click();
@@ -124,6 +124,8 @@ export default function AboutSection() {
               <p className="text-gray-400 text-lg">
                 <a
                   href="https://x.com/SushrutNisal"
+                  data-ga-event="twitter_click"
+                  data-ga-label="about_section_availability"
                   className="opacity-60 hover:opacity-100 transition-opacity"
                 >
                   @sushrutnisal
@@ -191,6 +193,8 @@ export default function AboutSection() {
 
           <HoverBorderGradient
             as="button"
+            data-ga-event="resume_click"
+            data-ga-label="about_section"
             onClick={() => document.getElementById('cvImageLink').click()}
             className="flex items-center gap-2 text-white py-1 liquid"
             containerClassName="border-[#0AE4EB]"
