@@ -68,6 +68,29 @@ function App() {
     setupGSAPAnimations();
   }, []);
 
+  // GA4 custom event tracking (data-ga-event / data-ga-label)
+  useEffect(() => {
+    const trackClick = (e) => {
+      const target = e.target.closest("[data-ga-event]");
+      if (!target) return;
+
+      const eventName = target.getAttribute("data-ga-event");
+      const eventLabel = target.getAttribute("data-ga-label") || "unknown";
+
+      ReactGA.event({
+        category: "interaction",
+        action: eventName,
+        label: eventLabel,
+      });
+    };
+
+    document.addEventListener("click", trackClick);
+
+    return () => {
+      document.removeEventListener("click", trackClick);
+    };
+  }, []);
+
   return (
     <>
       <PixelCursorTrail />
