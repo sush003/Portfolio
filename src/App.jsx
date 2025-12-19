@@ -14,7 +14,12 @@ import { PixelCursorTrail } from "./components/ui/pixel-trail";
 function App() {
   // Scroll to top on page load/refresh
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // Force page to always load at the top on refresh
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, []);
 
   // GA4 page tracking for SPA (including hash/section navigation)
