@@ -9,6 +9,11 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import Dnote from "../assets/images/Dnote_final.png";
+import GIFinder from "../assets/images/GIFinder.png";
+import healthfactfinder from "../assets/images/healthfactfinder.png"
+import studyspark from "../assets/images/studyspark.png"
+import taskflow from "../assets/images/taskflow.png"
+import trackr from "../assets/images/trackr.jpeg"
 export default function ServicesSection() {
   const services = [
     {
@@ -116,18 +121,18 @@ export default function ServicesSection() {
           {[
             {
               title: "Health Fact Finder",
-              description: "Description for Project 1",
+              description: "AI-powered platform detecting and flagging medical misinformation.",
               duration: "Jan 2024 – Apr 2024",
-              content: "Detailed content for Project 1...",
-              logo: Dnote,
+              content: "HealthFactFinder uses hybrid deep learning and vector search to identify medical misinformation with 92% accuracy across social media platforms.",
+              logo: healthfactfinder,
               link: "https://github.com/sush003/Health_fact_finderV2"
             },
             {
               title: "Study Spark",
-              description: "Description for Project 2",
+              description: "Full-stack MERN platform for AI-driven collaborative learning.",
               duration: "Sep 2023 – Dec 2023",
-              content: "Detailed content for Project 2...",
-              logo: Dnote,
+              content: "StudySpark is a MERN platform featuring AI quiz generation, real-time collaboration via Socket.io, and optimized ETL pipelines for massive datasets.",
+              logo: studyspark,
               link: "https://github.com/sush003/StudySparkAI"
             },
             {
@@ -135,7 +140,7 @@ export default function ServicesSection() {
               description: "Description for Project 3",
               duration: "May 2023 – Aug 2023",
               content: "Detailed content for Project 3...",
-              logo: Dnote,
+              logo: GIFinder,
               link: "https://github.com/sush003/GIFinder"
             },
             {
@@ -143,7 +148,7 @@ export default function ServicesSection() {
               description: "Description for Project 4",
               duration: "Jan 2023 – Apr 2023",
               content: "Detailed content for Project 4...",
-              logo: Dnote,
+              logo: taskflow,
               link: "https://github.com/sush003/taskflow33"
             },
           ].map((project, index) => (
@@ -157,7 +162,17 @@ export default function ServicesSection() {
                   <img
                     src={project.logo}
                     alt={`${project.title} logo`}
-                    className="h-full w-full object-contain opacity-95 transition-transform duration-300 ease-out group-hover:scale-110"
+                    className={`h-full w-full ${
+                      project.title === "GIFinder"
+                        ? "object-cover"
+                        : project.title === "Health Fact Finder"
+                       ? "object-cover"
+                       : project.title === "Study Spark"
+                       ? "object-cover"
+                       : project.title === "Task Flow"
+                       ? "object-cover"
+                        : "object-contain"
+                    } opacity-95 transition-transform duration-300 ease-out group-hover:scale-110`}
                   />
                 </div>
 
@@ -223,7 +238,7 @@ export default function ServicesSection() {
       {/* Left: Logo */}
       <div className="w-[220px] flex items-center justify-center border-r border-neutral-800 overflow-hidden">
         <img
-          src={Dnote}
+          src={trackr}
           alt={`Chrome Extension logo`}
           className="h-full w-full object-contain opacity-95 transition-transform duration-300 ease-out group-hover:scale-110"
         />

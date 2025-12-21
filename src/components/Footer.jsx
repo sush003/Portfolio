@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer>
-      <p> phir anna kabhii hamare site pe </p>
+      <p> © 2025 Sushrut Nisal. All rights reserved. Go ahead, steal it. My therapist says I need to learn to let go of things. </p>
     </footer>
   );
 }

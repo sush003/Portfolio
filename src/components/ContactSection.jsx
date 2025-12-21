@@ -12,9 +12,9 @@ export default function ContactSection() {
       <p>
         <strong>Phone:</strong> +91 9423556667
       </p>
-      <p>
+      {/* <p>
         <strong>Address:</strong> kyu chahiye bhaiii??
-      </p>
+      </p> */}
     </section>
   );
 }

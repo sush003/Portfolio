@@ -5,10 +5,12 @@ export default function CTASection() {
       <p>
         
       </p>
-      <a href="https://x.com/SushrutNisal" className="cta-button">
-        Contact Me
+      <a href="https://www.linkedin.com/in/sushrut-nisal-a95b21258/" className="cta-button">
+        <span className="cta-content">
+          <span>Contact Me</span>
+          <i className="fa-brands fa-linkedin text-xl ml-2"></i>
+        </span>
       </a>
     </section>
   )
 }
-
