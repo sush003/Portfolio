@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { setupGSAPAnimations } from "./hooks/useGSAP";
 import { NavBarDemo } from "./components/navbar";
 import { PixelCursorTrail } from "./components/ui/pixel-trail";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   // Scroll to top on page load/refresh
@@ -107,6 +108,7 @@ function App() {
       <CTASection />
       <ContactSection />
       <Footer />
+       <Analytics/>
     </>
   );
 }

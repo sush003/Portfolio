@@ -2,6 +2,9 @@ import { HoverBorderGradient } from "@/components/ui/hover-border-gradient";
 // import { StackIcon } from "@/components/ui/stack-icon";
 import StackIcon from "tech-stack-icons";
 import splineIcon from "../assets/images/spline.png";
+import reactFlowIcon from "../assets/images/reactflow.png";
+import aceternityIcon from "../assets/images/aceternity.png";
+import websocketIcon from "../assets/images/websocket2.svg";
 
 const iconMap = {
   JavaScript: "js",
@@ -129,6 +132,24 @@ export default function FeaturesSection() {
                         <img
                           src={splineIcon}
                           alt="Spline"
+                          className="w-full h-full object-contain"
+                        />
+                      ) : skill === "React Flow" ? (
+                        <img
+                          src={reactFlowIcon}
+                          alt="React Flow"
+                          className="w-full h-full object-contain"
+                        />
+                      ) : skill === "AceternityUI" ? (
+                        <img
+                          src={aceternityIcon}
+                          alt="Aceternity UI"
+                          className="w-full h-full object-contain"
+                        />
+                      ) : skill === "WebSockets" ? (
+                        <img
+                          src={websocketIcon}
+                          alt="WebSockets"
                           className="w-full h-full object-contain"
                         />
                       ) : (
