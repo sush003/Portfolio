@@ -19,7 +19,7 @@ export default function ServicesSection() {
     {
       title: "Dnote",
       description: "Software Developer Intern",
-      duration: "May 2024 – Aug 2024",
+      duration: "June 2025 – Aug 2025",
       content:
         " Engineered low-latency Supabase backends and interactive React mind-maps with Grok AI automation, optimizing system performance via query tuning and CI/CD. ",
       logo: Dnote,
@@ -122,7 +122,7 @@ export default function ServicesSection() {
             {
               title: "Health Fact Finder",
               description: "AI-powered platform detecting and flagging medical misinformation.",
-              duration: "Jan 2024 – Apr 2024",
+              duration: "Jan 2025 – Apr 2025",
               content: "HealthFactFinder uses hybrid deep learning and vector search to identify medical misinformation with 92% accuracy across social media platforms.",
               logo: healthfactfinder,
               link: "https://github.com/sush003/Health_fact_finderV2"
@@ -130,24 +130,24 @@ export default function ServicesSection() {
             {
               title: "Study Spark",
               description: "Full-stack MERN platform for AI-driven collaborative learning.",
-              duration: "Sep 2023 – Dec 2023",
+              duration: "Sep 2024 – Dec 2024",
               content: "StudySpark is a MERN platform featuring AI quiz generation, real-time collaboration via Socket.io, and optimized ETL pipelines for massive datasets.",
               logo: studyspark,
               link: "https://github.com/sush003/StudySparkAI"
             },
             {
               title: "GIFinder",
-              description: "Description for Project 3",
-              duration: "May 2023 – Aug 2023",
-              content: "Detailed content for Project 3...",
+              description: "Multi-source GIF aggregator for Indian memes.",
+              duration: "May 2025",
+              content: "GIFinder is a React and Express application that aggregates GIFs from GIPHY, Tenor, Reddit, and Google, optimized for Indian memes.",
               logo: GIFinder,
               link: "https://github.com/sush003/GIFinder"
             },
             {
               title: "Task Flow",
-              description: "Description for Project 4",
-              duration: "Jan 2023 – Apr 2023",
-              content: "Detailed content for Project 4...",
+              description: "Effortlessly manage tasks, projects, and deadlines.",
+              duration: "Sept 2025 – Oct 2025",
+              content: "TaskFlow is a secure, real-time task management PWA featuring calendar integration, project tracking, and responsive UI for efficient workflow organization.",
               logo: taskflow,
               link: "https://github.com/sush003/taskflow33"
             },
@@ -274,10 +274,11 @@ export default function ServicesSection() {
         </div>
 
         <p className="mt-3 text-sm text-neutral-400 max-w-[520px] opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
-          Chrome extension description.
+          Fully automated browser extension for real-time price tracking.
+
         </p>
         <p className="mt-1 text-xs text-neutral-500 opacity-100 transition-opacity duration-500 ease-out group-hover:opacity-0">
-          2024
+          April 2025
         </p>
 
         {/* Hover Details */}
@@ -287,7 +288,7 @@ export default function ServicesSection() {
             What I worked on
           </h4>
           <p className="text-sm  text-neutral-300 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
-            Chrome extension details...
+            Sophisticated Chrome Extension utilizing Manifest V3, Service Workers, DOM querying, and EmailJS API integration for autonomous, real-time e-commerce price monitoring.
           </p>
         </div>
       </div>
